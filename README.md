@@ -1,4 +1,4 @@
-# CAloDS
+# CAlgoDS
 
 Algorithms and data structures in C.
 
