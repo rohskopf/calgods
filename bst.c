@@ -40,11 +40,19 @@ Each item is processed/printed once, so this has O(N) time where N = # nodes.
 */
 void traverse_tree(tree *l) // displaying the nodes!
 {
+
+  int test = 0;
   if (l != NULL)
   {
+    printf("l->left\n");
     traverse_tree(l->left);
     printf("%d \n", l->item);
+    printf("l->right\n");
     traverse_tree(l->right);
+    printf("done\n");
+  }
+  else{
+    printf("NULL!\n");
   }
 }
 
@@ -91,6 +99,8 @@ int main(){
   printf("Binary Tree in C\n\n");
 
   tree *root_node = NULL;
+
+  // build the tree
 
   insert_tree(&root_node, 10, NULL);
   insert_tree(&root_node, 20, NULL);
